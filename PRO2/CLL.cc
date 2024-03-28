@@ -59,4 +59,5 @@ int main() {
 	for (int i = 0; i < n; ++i) {
 		cout << v[i].team_num << ' ' << v[i].score << ' ' << v[i].goals_favor << ' ' << v[i].goals_contra << endl;
 	}
+	
 }
