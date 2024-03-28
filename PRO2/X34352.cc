@@ -19,6 +19,7 @@ int main()
             cout << m[str] << endl;
         }
         
+        
     }
     
 }
