@@ -27,6 +27,7 @@ void calc(list<int>& l){
         int max,min;
         float avg;
         list<int>::iterator it = l.begin();
+        
         min=*it;
         max =*it;
         avg = *it;
