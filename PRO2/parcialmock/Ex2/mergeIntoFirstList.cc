@@ -24,5 +24,6 @@ void mergeIntoFirstList(list<int> &l1, list<int> l2){
     {
         l1.insert(it1, *it2);
         ++it2;
+        
     }
 }
