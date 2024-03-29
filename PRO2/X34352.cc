@@ -16,7 +16,10 @@ int main()
         }
         else
         {
+
+            
             cout << m[str] << endl;
+
         }
     }
     
