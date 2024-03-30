@@ -5,6 +5,7 @@ using namespace std;
 
 int main()
 {
+    
     map<string, int> m;
     string str;
     char ch;

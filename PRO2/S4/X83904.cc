@@ -5,6 +5,7 @@ using namespace std;
 
 int main()
 {
+    
     string str;
     set<string> s;
     while (cin >> str)
@@ -18,4 +19,5 @@ int main()
         i++;
     }
     
+
 }
