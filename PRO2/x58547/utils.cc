@@ -20,6 +20,7 @@ bool isLowercaseLetter(char c)
     return 'a' <= c and c <= 'z';
 }
 
+
 bool isVariable(string s)
 {
     if (int(s.size()) == 0) return false;
