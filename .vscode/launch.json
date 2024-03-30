@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Arnau/Documents/UPC/UPC/PRO2",
-      "program": "c:/Users/Arnau/Documents/UPC/UPC/PRO2/build/Debug/outDebug",
+      "cwd": "c:/Users/Arnau/Documents/UPC/PRO2",
+      "program": "c:/Users/Arnau/Documents/UPC/PRO2/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
