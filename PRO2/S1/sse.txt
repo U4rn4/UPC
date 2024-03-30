@@ -1,0 +1,4 @@
+La suma de la sequencia 1 es 4
+La suma de la sequencia 2 es 0
+La suma de la sequencia 3 es 9
+La suma de la sequencia 4 es 40
