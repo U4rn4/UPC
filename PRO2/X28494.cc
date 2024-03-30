@@ -17,6 +17,8 @@ void delet(list<int> &l, int s){
     
 }
 
+
+
 void calc(list<int>& l){
     if (l.empty())
     {
