@@ -3,11 +3,10 @@
  using namespace std;
  
  struct parint {int prim, seg;};
-
- parint max_min1(const vector<int>& v)
  /* Pre: v.size()>0 */
  /* Post: el primer componente del resultado es el valor maximo de v;
     el segundo componente del resultado es el valor minimo de v */
+ parint max_min1(const vector<int>& v)
  {
      parint r;
      int max = v[0], min = v[0];
