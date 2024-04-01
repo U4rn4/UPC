@@ -18,7 +18,7 @@ BT removeAll(const string &extension, const BT &t){
 
     string s;
     int i = t.value().length() - extension.length();
-    if (t.value().substr(i)==extension)
+    if (i>0 and t.value().substr(i)==extension and t.value()[i-1]=='.')
     {
         return BT();
     }
