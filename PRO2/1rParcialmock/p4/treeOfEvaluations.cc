@@ -1,40 +1,28 @@
 #include "treeOfEvaluations.hh"
 
-BinTree<bool> aux(BinTree<string> t, bool& b){
+bool evaluate(const BinTree<string> t){
     if (t.empty())
     {
-        return BinTree<bool>();
+        return false;
     }
     else if (t.value()=="and")
     {
-        bool a1=false, a2=false;
-        aux(t.left(),a1);
-        aux(t.right(),a2);
-        return BinTree<bool>(a1 and a2, aux(t.left(), a1), aux(t.right(),a1));
+        return (evaluate(t.left()) and evaluate(t.right()));
     }
     else if (t.value()=="or")
     {
-        bool a1=false, a2=false;
-        aux(t.left(),a1);
-        if(not a1) aux(t.right(),a2);
-        return BinTree<bool>(a1 or a2, aux(t.left(),a1), aux(t.right(),a1));
+        return (evaluate(t.left()) or evaluate(t.right()));
     }
     else if (t.value()=="not")
     {
-        bool a1 = not aux(t.left(), b).value();
-        return BinTree<bool>(a1, aux(t.left(),a1), aux(t.right(),a1));
+        return (not evaluate(t.left()));
     }
-    else if (t.value()=="true")
+    else if (t.value()=="false")
     {
-        b=true;
-        return BinTree<bool>(true);
-        
+        return false;
     }
-    else {
-        b=false;
-        return BinTree<bool>(false);
-        
-    }
+    else return true;
+    
     
 }
 
@@ -46,6 +34,29 @@ BinTree<bool> aux(BinTree<string> t, bool& b){
 //       representa una expressió que s'avalua a true si i només si
 //       hi ha el valor true a la posició p de l'arbre retornat.
 BinTree<bool> treeOfEvaluations(BinTree<string> t){
-    bool b=false;
-    return aux(t, b);
+    if (t.empty())
+    {
+        return BinTree<bool>();
+    }
+    else if (t.value()=="and")
+    {
+        return BinTree<bool>(evaluate(t.left()) and evaluate(t.right()), treeOfEvaluations(t.left()), treeOfEvaluations(t.right()));
+    }
+    else if (t.value()=="or")
+    {
+        return BinTree<bool>(evaluate(t.left()) or evaluate(t.right()), treeOfEvaluations(t.left()), treeOfEvaluations(t.right()));
+    }
+    else if (t.value()=="not")
+    {
+        return BinTree<bool>(not evaluate(t.left()) , treeOfEvaluations(t.left()), treeOfEvaluations(t.right()));
+    }
+    else if (t.value()=="true")
+    {
+        return BinTree<bool>(true);
+        
+    }
+    else {
+        return BinTree<bool>(false);
+        
+    }
 }
