@@ -13,8 +13,6 @@ int power(int a, int b){
   return pot;
 }
 
-
-
 void patro(matriu& A, int i, int j, int k, int l, int n){
   if(n != 1) {
     int columna = (l + j)/2;
@@ -27,9 +25,6 @@ void patro(matriu& A, int i, int j, int k, int l, int n){
     patro(A, fila+1, columna+1, k, l, n-1);
   }
 }
-
-
-
 
 int main() {
   int n;

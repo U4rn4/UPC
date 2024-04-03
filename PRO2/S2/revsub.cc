@@ -16,7 +16,6 @@ void reverseSubstring(string &s, int i, int j){
     
 }
 
-
 int main()
 {
     int i, j;
