@@ -1,4 +1,7 @@
 .vscode
 /.vscode
 *.json
+*.o
+*.exe
+*txt
 
