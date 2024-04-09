@@ -1,6 +1,9 @@
+#Evitar configuraciones y compilaciones
 .vscode
 *.json
 *.o
 *.exe
 *txt
 
+#No quiero que me salte copia como entenderéis 
+PRO2/HomeworkInProcess/
