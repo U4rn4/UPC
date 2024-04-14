@@ -1,16 +1,15 @@
-/*
-Falta eficacia en el ejercicio y no me renta mejorarlo jajja
-*/
 #include "Estudiant.hh"
 #include <vector>
-using namespace std;
 
 void arrodonir_vector(vector<Estudiant>& v){
-    for (int i = 0; i < v.size(); i++)
+    int n=v.size();
+    for (int i = 0; i < n; i++)
     {
         if (v[i].te_nota())
-        {
-            v[i].modificar_nota(((int) (10. * (v[i].consultar_nota() + 0.05))) / 10.0);
+        {   
+            double num = v[i].consultar_nota();
+            num = (((int(10.0 * (num + 0.05))) / 10.0));
+            v[i].modificar_nota(num);
         }
         
     }
