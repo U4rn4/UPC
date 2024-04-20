@@ -7,7 +7,6 @@
 using namespace std;
 
 
-
 int main() {
     list<ParInt> aa;
     LlegirLlistaParInt(aa);
