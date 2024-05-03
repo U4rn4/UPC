@@ -28,17 +28,19 @@ void Cjt_estudiants::afegir_estudiant(const Estudiant &est, bool& b)
 
 void Cjt_estudiants::esborrar_estudiant(int dni, bool& b)
 {
-    int i = cerca_dicot(vest,0,nest-1,dni);
-    b = ( vest[i].consultar_DNI() == dni );
+    int i=cerca_dicot(vest,0,nest-1,dni);
+    b =  i < nest and vest[i].consultar_DNI() == dni;
     if (b)
-    {
+        {
         if (vest[i].te_nota())
         {
             suma_notes -= vest[i].consultar_nota();
             --nest_amb_nota;
         }
-        vest.erase(vest.begin() + i);
+        for (int j = i; j < nest-1; j++)
+        {
+        vest[j] = vest[j+1];
+        }
         nest--;
     }
-    
 }
