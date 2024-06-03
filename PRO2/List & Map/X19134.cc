@@ -45,3 +45,22 @@ void EscriureLlistaParInt(const list<ParInt>& l){
 // Post: s’han escrit al canal estandar de sortida els elements de l
 
 
+/*
+MAIN:
+
+#include <iostream>
+#include <list>
+#include "ParInt.hh"
+#include "LlistaIOParInt.hh"
+
+using namespace std;
+
+
+
+int main() {
+    list<ParInt> aa;
+    LlegirLlistaParInt(aa);
+    EscriureLlistaParInt(aa); 
+    
+}
+*/
