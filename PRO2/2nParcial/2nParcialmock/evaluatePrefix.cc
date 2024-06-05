@@ -5,30 +5,22 @@
 string aux(const BinTree<string> t, const int n, int a){
     if (t.value()=="Concat")
     {
-        string s2 = "";
         string s = aux(t.left(),n,a);
-        if(s.length()<n or a!=0) s2 = aux(t.right(),n,a);
-        return s + s2;
+        if(s.length()<n or a!=0){
+            string s2 = aux(t.right(),n,a);
+            return s + s2;
+        } 
+        return s;
     }
     if (t.value()=="Reverse")
     {
         string s=aux(t.left(),n,a+1);
         string f;
-        if (a==0)
+        for (int i = s.length()-1; i >= 0; i--)
         {
-            for (int i = s.length()-1; i >= s.length()-n; i--)
-            {
-                f+=s[i];
-            }
+            f+=s[i];
         }
-        else
-        {
-            for (int i = s.length()-1; i >= 0; i--)
-            {
-                f+=s[i];
-            }
-        }
-         
+
         return f;
     }
 
